@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.ArticleList {
+  width: 100%;
+  display: block;
+  text-align: center;
+  border: 2px solid rgb(2, 2, 49); 
+  border-radius: 5px;
+  text-align: center;
+  background-color: aliceblue;
+  align-items: center;
+  z-index: 999;
+  font-size: 20px;
+  line-height: 48px;
+}
