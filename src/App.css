@@ -92,7 +92,7 @@
 }
 
 .navItem {
-  color: black;
+  color: rgb(2, 2, 49);
 }
 
 .commentsSection {
@@ -110,6 +110,7 @@
 }
 
 .commentCard {
+  padding: 2vh;
   border-bottom: 1px solid rgb(2, 2, 49);
   margin-left: 8vh;
   margin-right: 8vh;

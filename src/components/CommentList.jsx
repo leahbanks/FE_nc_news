@@ -21,7 +21,7 @@ export default function CommentList() {
 
   return (
     <section className="commentsSection">
-      <h3>Comments</h3>
+      <h3>{comments.length} Comments</h3>
       {comments.length === 0 ? <p>No comments found</p> : ""}
       <AddComment />
       <section className="commentsContainer">
