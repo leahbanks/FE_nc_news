@@ -59,7 +59,6 @@ export default function Article(props) {
       <p className="articleBody">{article.body}</p>
       </section>
       <ArticleVotes article={article} setArticle={setArticle}/>
-      
       <CommentList article={article} articleAuthor={articleAuthor} />
     </section>
   );
