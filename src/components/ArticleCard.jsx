@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function ArticleCard(props) {
   const {
@@ -9,7 +9,7 @@ export default function ArticleCard(props) {
     topic,
     comment_count,
     votes,
-    created_at,
+    formattedDate,
   } = props;
 
   const navigate = useNavigate();
@@ -26,13 +26,20 @@ export default function ArticleCard(props) {
         className="ArticleList"
       >
         <li>
-          <h4>
-            {author} |{" "}
-            {topic.charAt(0).toUpperCase() + topic.slice(1, topic.length)} |{" "}
-            {comment_count} Comments | {votes} Votes | {created_at.slice(0, 10)}
+          <h4 className="article-info">
+            {formattedDate.slice(3, formattedDate.length)} |{" "}
+            {topic.charAt(0).toUpperCase() + topic.slice(1, topic.length)}
           </h4>
-          <h2>{title}</h2>
-          {body.substr(0, 150) + "..."}
+          <Link
+            to={`/articles/${article_id}`}
+            style={{ textDecoration: "none" }}
+          >
+            <h2>{title}</h2>
+          </Link>
+          <h4 className="article-info">
+            By {author} | 💬 {comment_count} | 👍 {votes}
+          </h4>
+          <p className="articlePreview">{body.substr(0, 190) + "..."}</p>
         </li>
         <button onClick={() => handleClick()}>Read More</button>
       </ul>

@@ -1,6 +1,7 @@
 import ArticleCard from "./ArticleCard";
 import { useEffect, useState } from "react";
 import { fetchArticles } from "../utils/api";
+import { format } from "date-fns";
 
 export default function ArticleList() {
   const [loading, setLoading] = useState(true);
@@ -17,9 +18,11 @@ export default function ArticleList() {
 
   return (
     <div>
-      {articles.map((article) => (
-        <ArticleCard {...article} key={article.article_id}/>
-      ))}
+      {articles.map((article) => {
+        const date = new Date(article.created_at);
+        const formattedDate = format(date, "E do LLL y");
+        return <ArticleCard {...article} formattedDate={formattedDate} key={article.article_id} />;
+      })}
     </div>
   );
 }

@@ -1,27 +1,32 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CommentList from "./CommentList";
+import ArticleVotes from "./ArticleVotes";
 import { getArticleById, getUsers } from "../utils/api";
+import { format } from "date-fns";
 
 export default function Article(props) {
   const { article, setArticle } = props;
-  const [articleLoading, setArticleLoading] = useState(true)
+  const [articleLoading, setArticleLoading] = useState(true);
   const [articleAuthor, setArticleAuthor] = useState({});
   const { article_id } = useParams();
 
   useEffect(() => {
     Promise.all([getArticleById(article_id), getUsers()]).then(
       ([articleResponse, userResponse]) => {
-        setArticle(articleResponse);
+        const date = new Date(articleResponse.created_at);
+        const formattedDate = format(date, "HH:MM E do LLL y");
+        const newArticle = { ...articleResponse, formattedDate };
+        setArticle(newArticle);
         userResponse.forEach((user) => {
-          if (user.username === articleResponse.author) {
+          if (user.username === newArticle.author) {
             setArticleAuthor(user);
             setArticleLoading(false);
           }
         });
       }
     );
-  }, [article_id, setArticleLoading, setArticle]);
+  }, [article_id, setArticleLoading, setArticle, article.created_at]);
 
   if (articleLoading) {
     return "Loading...";
@@ -29,28 +34,33 @@ export default function Article(props) {
 
   return (
     <section>
-      <h4>
-         {article['topic'].charAt(0).toUpperCase() +
-          article['topic'].slice(1, article['topic'].length)}{" "}
-        | {article['created_at'].slice(0, 10)} 
-      </h4>
+      <section className="Article">
       <h2>{article.title}</h2>
-      <h4>
+      <h4 className="Article">
+        
+        {article.topic.charAt(0).toUpperCase() +
+          article.topic.slice(1, article.topic.length)}{" "}
+        | {article.formattedDate} | 💬 {article.comment_count} | 👍{" "}
+        {article.votes}
+      </h4>
+      <h5 className="Article">
         {" "}
         <img
           className="userAvatar"
           src={articleAuthor.avatar_url}
           alt={`${articleAuthor.username}'s Avatar`}
-        />
-        <br></br> By {articleAuthor.username}
-      </h4>
+        /> by {articleAuthor.username}
+      </h5>
       <img
-        className="Article"
+        className="articleImg"
         src={article.article_img_url}
         alt={article.title}
       />
-      <p className="Article">{article.body}</p>
-      <CommentList article={article} articleAuthor={articleAuthor}/>
+      <p className="articleBody">{article.body}</p>
+      </section>
+      <ArticleVotes article={article} setArticle={setArticle}/>
+      
+      <CommentList article={article} articleAuthor={articleAuthor} />
     </section>
   );
 }
