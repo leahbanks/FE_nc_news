@@ -38,11 +38,12 @@
 }
 
 .ArticleList {
-  width: 100%;
+  width: 85vw;
+  margin: 4vh auto 5vh auto;
   display: block;
   text-align: center;
-  border: 2px solid rgb(2, 2, 49); 
-  border-radius: 5px;
+  border: 2px solid cadetblue; 
+  border-radius: 15px;
   background-color: aliceblue;
   align-items: center;
   z-index: 999;
@@ -60,6 +61,12 @@
   text-align: left;
 }
 
+.ArticleList h2 {
+  /* background-color:cadetblue;
+  /* padding: 1.5vh 1.5vw; */
+  /* border-radius: 15px; */ 
+}
+
 .userAvatar {
   width: 1.5cm;
 }
@@ -71,11 +78,12 @@
 }
 
 .navBar {
-  width: 100%;
+  width: 85vw;
+  margin: 4vh auto 5vh auto;
   display: block;
   text-align: center;
-  border: 2px solid rgb(2, 2, 49); 
-  border-radius: 5px;
+  border: 2px solid cadetblue; 
+  border-radius: 15px;
   background-color: aliceblue;
   align-items: center;
   z-index: 999;
@@ -84,5 +92,26 @@
 }
 
 .navItem {
-  color: black;
+  color: rgb(2, 2, 49);
+}
+
+.commentsSection {
+  background-color: aliceblue;
+  width: 85vw;
+  margin: 4vh auto 5vh auto;
+  border-radius: 15px;
+}
+
+.commentsSection h3 {
+  background-color:cadetblue;
+  padding: 1.5vh 1.5vw;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.commentCard {
+  padding: 2vh;
+  border-bottom: 1px solid rgb(2, 2, 49);
+  margin-left: 8vh;
+  margin-right: 8vh;
 }

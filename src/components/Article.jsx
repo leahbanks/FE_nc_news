@@ -50,7 +50,7 @@ export default function Article(props) {
         alt={article.title}
       />
       <p className="Article">{article.body}</p>
-      <CommentList article={article} />
+      <CommentList article={article} articleAuthor={articleAuthor}/>
     </section>
   );
 }
