@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 export default function NavBar() {
   return (
     <div className="navBar">
-      <Link to="/topics" style={{ textDecoration: "none" }} className="navItem">
-        Topics
-      </Link>{" "}
-      |{" "}
       <Link to="/search" style={{ textDecoration: "none" }} className="navItem">
         Search
       </Link>{" "}

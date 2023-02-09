@@ -1,94 +1,127 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ 
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .ArticleList {
   width: 85vw;
   margin: 4vh auto 5vh auto;
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: left;
   border: 2px solid cadetblue; 
-  border-radius: 15px;
   background-color: aliceblue;
   align-items: center;
   z-index: 999;
   font-size: 20px;
   line-height: 48px;
+  border-radius: 60px;
+  padding: 20px;
+}
+
+.ArticleList:hover {
+  box-shadow: rgb(162, 194, 195) 0px 54px 55px, rgb(162, 194, 195) 0px -12px 30px, rgb(162, 194, 195) 0px 4px 6px, rgb(162, 194, 195) 0px 12px 13px, rgb(162, 194, 195) 0px -3px 5px;
+}
+
+.article-info {
+  color: darkslategray;
+  font-size: small;
+  margin: 0vh;
+  padding: 0%;
+}
+
+.articlePreview {
+  font-size: medium;
+  line-height: 3vh;
 }
 
 .Article {
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.7);
   width: fit-content;
-  margin: 1vh 2vw 3vh 0;
-  margin: auto auto 1vh auto;
+  margin-left: 20vh;
+  margin-right: 20vh;
   padding: 0 20px;
   text-align: left;
 }
 
-.ArticleList h2 {
-  /* background-color:cadetblue;
-  /* padding: 1.5vh 1.5vw; */
-  /* border-radius: 15px; */ 
+.articleBody {
+  text-align: left;
+  margin-left: 20vh;
+  margin-right: 40vh;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  line-height: 5vh;
 }
 
-.userAvatar {
-  width: 1.5cm;
+.Article h2 {
+  font-family: 'Poppins', sans-serif;
+  padding: 1.5vh 1.5vw;
+  border-radius: 15px;
+  font-size: 50px;
+  color: #282c34;
+  text-align: left;
+  margin-left: 20vh;
+  margin-right: 25vh;
+  margin-bottom: 0%;
 }
 
-.header {
-  color: black;
-  font-style: normal;
-  text-decoration: none;
-}
-
-.navBar {
-  width: 85vw;
+.articleVote {
+  width: 30vw;
+  font-family: 'Poppins', sans-serif;
   margin: 4vh auto 5vh auto;
   display: block;
   text-align: center;
   border: 2px solid cadetblue; 
   border-radius: 15px;
   background-color: aliceblue;
-  align-items: center;
-  z-index: 999;
-  font-size: 20px;
-  line-height: 48px;
+  font-size: 15px;
+  line-height: 40px;
+}
+
+.articleImg {
+  border-radius: 60px;
+  margin-left: 20vh;
+  margin-right: 20vh;
+}
+
+ .ArticleList h2 {
+  font-family: 'Poppins', sans-serif;
+  border-radius: 15px;
+  font-size: 40px;
+  color: #282c34;
+  text-align: left;
+  text-decoration: none;
+ }
+
+.userAvatar {
+  width: 1cm;
+}
+
+.header {
+  font-family: 'Poppins', sans-serif;
+  color:#282c34;
+  text-decoration: none;
+  text-align: left;
+  margin-left: 10vh;
+  font-size: 60px;
+}
+
+.navBar {
+  width: 30vw;
+  font-family: 'Poppins', sans-serif;
+  margin: 4vh auto 5vh auto;
+  display: block;
+  text-align: center;
+  border: 2px solid cadetblue; 
+  border-radius: 15px;
+  background-color: aliceblue;
+  font-size: 15px;
+  line-height: 40px;
 }
 
 .navItem {
@@ -99,14 +132,17 @@
   background-color: aliceblue;
   width: 85vw;
   margin: 4vh auto 5vh auto;
-  border-radius: 15px;
+  border-radius: 20px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
 }
 
 .commentsSection h3 {
   background-color:cadetblue;
   padding: 1.5vh 1.5vw;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
 }
 
 .commentCard {

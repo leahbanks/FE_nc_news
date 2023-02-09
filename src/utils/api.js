@@ -33,3 +33,22 @@ export const getComments = (article_id) => {
     return data;
   });
 };
+
+export const patchArticleVotes = (article_id, num) => {
+  const voteIncrease = {
+    inc_votes: num,
+  };
+  return newsApi
+    .patch(`articles/${article_id}`, voteIncrease)
+    .then(({ data }) => {
+      return data.updatedVotes;
+    });
+};
+
+export const postComment = (article_id, newComment) => {
+  return newsApi
+    .post(`/articles/${article_id}/comments`, newComment)
+    .then(({ data }) => {
+      return data.postedComment;
+    });
+};
