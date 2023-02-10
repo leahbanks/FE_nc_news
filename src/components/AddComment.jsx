@@ -10,23 +10,16 @@ export default function AddComment({
   loadingComments,
   setLoadingComments,
 }) {
-  const { loggedInUser } = useContext(UserContext);
+  const { loggedInUser} = useContext(UserContext);
   const [posting, setPosting] = useState(false);
   const [posted, setPosted] = useState(false);
   const [commentBody, setCommentBody] = useState("");
-  const [newComment, setNewComment] = useState({
-    comment_id: comments.length + 1,
-    body: commentBody,
-    article_id: article_id,
-    author: "grumpy19",
-    votes: 0,
-    created_at: new Date(),
-  });
+  console.log(loggedInUser)
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setPosting(true);
-    postComment(article_id, { username: "grumpy19", body: commentBody })
+    postComment(article_id, { username: loggedInUser.username, body: commentBody })
       .then((postedComment) => {
           setComments((currComments) => {
             const updatedComments = [postedComment, ...currComments]
