@@ -15,7 +15,7 @@ export default function Article(props) {
     Promise.all([getArticleById(article_id), getUsers()]).then(
       ([articleResponse, userResponse]) => {
         const date = new Date(articleResponse.created_at);
-        const formattedDate = format(date, "HH:MM E do LLL y");
+        const formattedDate = format(date, "HH:MM | E do LLL y");
         const newArticle = { ...articleResponse, formattedDate };
         setArticle(newArticle);
         userResponse.forEach((user) => {
@@ -35,30 +35,30 @@ export default function Article(props) {
   return (
     <section>
       <section className="Article">
-      <h2>{article.title}</h2>
-      <h4 className="Article">
-        
-        {article.topic.charAt(0).toUpperCase() +
-          article.topic.slice(1, article.topic.length)}{" "}
-        | {article.formattedDate} | 💬 {article.comment_count} | 👍{" "}
-        {article.votes}
-      </h4>
-      <h5 className="Article">
-        {" "}
+        <h2>{article.title}</h2>
+        <h4 className="Article">
+          {article.formattedDate} |{" "}
+          {article.topic.charAt(0).toUpperCase() +
+            article.topic.slice(1, article.topic.length)}{" "}
+          | 💬 {article.comment_count} | 👍 {article.votes}
+        </h4>
+        <h5 className="Article">
+          {" "}
+          <img
+            className="userAvatar"
+            src={articleAuthor.avatar_url}
+            alt={`${articleAuthor.username}'s Avatar`}
+          />{" "}
+          by {articleAuthor.username}
+        </h5>
         <img
-          className="userAvatar"
-          src={articleAuthor.avatar_url}
-          alt={`${articleAuthor.username}'s Avatar`}
-        /> by {articleAuthor.username}
-      </h5>
-      <img
-        className="articleImg"
-        src={article.article_img_url}
-        alt={article.title}
-      />
-      <p className="articleBody">{article.body}</p>
+          className="articleImg"
+          src={article.article_img_url}
+          alt={article.title}
+        />
+        <p className="articleBody">{article.body}</p>
       </section>
-      <ArticleVotes article={article} setArticle={setArticle}/>
+      <ArticleVotes article={article} setArticle={setArticle} />
       <CommentList article={article} articleAuthor={articleAuthor} />
     </section>
   );

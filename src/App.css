@@ -9,7 +9,6 @@
   width: 85vw;
   margin: 4vh auto 5vh auto;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   text-align: left;
@@ -24,7 +23,7 @@
 }
 
 .ArticleList:hover {
-  box-shadow: rgb(162, 194, 195) 0px 54px 55px, rgb(162, 194, 195) 0px -12px 30px, rgb(162, 194, 195) 0px 4px 6px, rgb(162, 194, 195) 0px 12px 13px, rgb(162, 194, 195) 0px -3px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .article-info {
@@ -36,7 +35,9 @@
 
 .articlePreview {
   font-size: medium;
+  font-family: 'Poppins', sans-serif;
   line-height: 3vh;
+  color: darkslategray;
 }
 
 .Article {
@@ -71,16 +72,20 @@
 }
 
 .articleVote {
-  width: 30vw;
+  color:#282c34;
   font-family: 'Poppins', sans-serif;
-  margin: 4vh auto 5vh auto;
   display: block;
+  align-self: center;
   text-align: center;
-  border: 2px solid cadetblue; 
   border-radius: 15px;
   background-color: aliceblue;
   font-size: 15px;
   line-height: 40px;
+  border: solid 1px cadetblue;
+  box-shadow: none;
+  margin: 5%;
+  position: static;
+  overflow: hidden;
 }
 
 .articleImg {
@@ -96,6 +101,8 @@
   color: #282c34;
   text-align: left;
   text-decoration: none;
+  margin-top: 1%;
+  margin-bottom: 1%;
  }
 
 .userAvatar {
@@ -104,28 +111,57 @@
 
 .header {
   font-family: 'Poppins', sans-serif;
+  width: 96vw;
+  margin-top: 0%;
+  margin: 4vh auto 5vh auto;
   color:#282c34;
+  display: block;
   text-decoration: none;
   text-align: left;
+  margin-bottom: 1%;
   margin-left: 10vh;
-  font-size: 60px;
+  font-size: 80px;
 }
 
 .navBar {
-  width: 30vw;
+  display: flex;
+  justify-content:flex-start
+}
+
+.nav-login:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.nav-filter:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.nav-filter {
+  color:aliceblue;
+  width: 10vw;
   font-family: 'Poppins', sans-serif;
-  margin: 4vh auto 5vh auto;
+  margin-left: 10vh;
+  margin-right: 2vh;
+  margin-bottom: 10%;
   display: block;
   text-align: center;
-  border: 2px solid cadetblue; 
   border-radius: 15px;
-  background-color: aliceblue;
+  background-color: cadetblue;
   font-size: 15px;
   line-height: 40px;
 }
 
-.navItem {
-  color: rgb(2, 2, 49);
+.nav-login {
+  color: aliceblue;
+  width: 10vw;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  text-align: center;
+  border-radius: 15px;
+  background-color: cadetblue;
+  font-size: 15px;
+  line-height: 40px;
+  margin-right: 10vh;
 }
 
 .commentsSection {
@@ -147,7 +183,55 @@
 
 .commentCard {
   padding: 2vh;
-  border-bottom: 1px solid rgb(2, 2, 49);
+  border-bottom: 1px solid cadetblue;
   margin-left: 8vh;
   margin-right: 8vh;
+}
+
+.button-readmore {
+  color:aliceblue;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 10vh;
+  margin-bottom: 10%;
+  display: block;
+  text-align: center;
+  border-radius: 15px;
+  background-color: cadetblue;
+  font-size: 15px;
+  line-height: 40px;
+  border-color: cadetblue;
+  box-shadow: none;
+  margin: 5%;
+  position: static;
+  overflow: hidden;
+};
+
+.button-readmore:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.button-container {
+  display:flex;
+  justify-content: center;
+}
+
+.button-addcomment {
+  color:aliceblue;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  align-self: center;
+  text-align: center;
+  border-radius: 15px;
+  background-color: cadetblue;
+  font-size: 15px;
+  line-height: 40px;
+  border-color: cadetblue;
+  box-shadow: none;
+  margin: 5%;
+  position: static;
+  overflow: hidden;
+}
+
+.button-addcomment:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
