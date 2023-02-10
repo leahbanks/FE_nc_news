@@ -14,7 +14,6 @@ export default function AddComment({
   const [posting, setPosting] = useState(false);
   const [posted, setPosted] = useState(false);
   const [commentBody, setCommentBody] = useState("");
-  console.log(loggedInUser)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,8 +21,7 @@ export default function AddComment({
     postComment(article_id, { username: loggedInUser.username, body: commentBody })
       .then((postedComment) => {
           setComments((currComments) => {
-            const updatedComments = [postedComment, ...currComments]
-                return updatedComments;
+            return [postedComment, ...currComments]
           });
         setPosted(true);
         setPosting(false);
