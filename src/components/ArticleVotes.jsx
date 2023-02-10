@@ -3,6 +3,7 @@ import { patchArticleVotes } from "../utils/api";
 
 export default function ArticleVotes({ article, setArticle }) {
   const [voted, setVoted] = useState(false);
+  const [error, setError] = useState("");
 
   const updateVotes = (e) => {
     let num = 0;
@@ -11,24 +12,42 @@ export default function ArticleVotes({ article, setArticle }) {
     } else if (e.target.value === "decrease") {
       num = -1;
     }
+    setError("");
     setArticle((currArticle) => {
       currArticle.votes += num;
       return { ...currArticle };
     });
     setVoted(true);
-    patchArticleVotes(article.article_id, num).then((response) => {
-      return response;
+    patchArticleVotes(article.article_id, num).catch((err) => {
+      setArticle((currArticle) => {
+        currArticle.votes -= num;
+        return { ...currArticle };
+      });
+      setError("Something has gone wrong - please try again!");
+      setVoted(false);
     });
   };
 
   return (
     <section className="articleVote">
-      {!voted ? 
-      ( <div>
-          <p>Enjoyed this article?</p>
-          <button onClick={updateVotes} value={"increase"}>👍</button>
-          <button onClick={updateVotes} value={"decrease"}>👎</button>
-        </div> ) : ( <p> Thanks for your feedback! </p>)}
+      <div>
+        {!voted ? (
+          <div>
+            <p>
+              Enjoyed this article?{" "}
+              <button onClick={updateVotes} value={"increase"}>
+                👍
+              </button>{" "}
+              <button onClick={updateVotes} value={"decrease"}>
+                👎
+              </button>
+            </p>
+          </div>
+        ) : (
+          <p> Vote submitted! </p>
+        )}
+      </div>
+      <p>{error}</p>
     </section>
   );
 }

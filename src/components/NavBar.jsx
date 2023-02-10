@@ -2,14 +2,17 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <div className="navBar">
-      <Link to="/search" style={{ textDecoration: "none" }} className="navItem">
-        Search
-      </Link>{" "}
-      |{" "}
-      <Link to="/users" style={{ textDecoration: "none" }} className="navItem">
-        Login/Sign Up
+    <section className="navBar">
+    <div>
+      <Link to="/" style={{ textDecoration: "none" }} className="nav-filter">
+        Filter
+      </Link>
+      </div>
+      <div>
+      <Link to="/users" style={{ textDecoration: "none" }} className="nav-login">
+        Log In
       </Link>
     </div>
+    </section>
   );
 }

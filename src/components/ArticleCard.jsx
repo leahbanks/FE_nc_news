@@ -39,9 +39,9 @@ export default function ArticleCard(props) {
           <h4 className="article-info">
             By {author} | 💬 {comment_count} | 👍 {votes}
           </h4>
-          <p className="articlePreview">{body.substr(0, 190) + "..."}</p>
+          <p className="articlePreview">{body.substr(0, 200) + "..."}</p>
         </li>
-        <button onClick={() => handleClick()}>Read More</button>
+        <button className="button-readmore" onClick={() => handleClick()}>Read More</button>
       </ul>
     </section>
   );
