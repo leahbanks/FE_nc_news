@@ -1,8 +1,15 @@
 import { postComment } from "../utils/api";
 import { useContext, useState } from "react";
 import { UserContext } from "../context/userContext";
+import { setDayWithOptions } from "date-fns/fp";
 
-export default function AddComment({ setComments, comments, article_id }) {
+export default function AddComment({
+  setComments,
+  comments,
+  article_id,
+  loadingComments,
+  setLoadingComments,
+}) {
   const { loggedInUser } = useContext(UserContext);
   const [posting, setPosting] = useState(false);
   const [posted, setPosted] = useState(false);
@@ -18,16 +25,17 @@ export default function AddComment({ setComments, comments, article_id }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setPosting(true)
-    setComments([newComment, ...comments]);
+    setPosting(true);
     postComment(article_id, { username: "grumpy19", body: commentBody })
       .then((postedComment) => {
-        setComments((currComments) => {
-          return [postedComment, ...currComments];
-        });
-        setCommentBody("");
+          setComments((currComments) => {
+            const updatedComments = [...currComments]
+                updatedComments[0] = postedComment
+                return updatedComments;
+          });
         setPosted(true);
         setPosting(false);
+        setLoadingComments(false)
       })
       .catch((err) => {
         "Something went wrong - please try again!";
@@ -42,14 +50,19 @@ export default function AddComment({ setComments, comments, article_id }) {
     <section className="add-comment">
       <div>
         {!posted ? (
-          <form className="button-container" onSubmit={handleSubmit}>
+          <form className="button-container" onSubmit={(e) => handleSubmit(e)}>
             <textarea
               id="comment-body"
+              placeholder="type your comment here"
               onChange={(e) => setCommentBody(e.target.value)}
               value={commentBody}
             ></textarea>
-            <button type="submit" className="button-addcomment">
-              {posted ? <p>Comment submitted! </p> : <p>Add Comment</p>}
+            <button
+              type="submit"
+              className="button-addcomment"
+              disabled={commentBody.length === 0}
+            >
+              Add Comment
             </button>
           </form>
         ) : (

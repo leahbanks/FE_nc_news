@@ -13,6 +13,7 @@ export default function CommentList() {
   const { loggedInUser } = useContext(UserContext);
 
   useEffect(() => {
+    setLoadingComments(true)
     getComments(article_id).then((comments) => setComments(comments));
     setLoadingComments(false);
   }, [article_id, loggedInUser]);
@@ -25,7 +26,13 @@ export default function CommentList() {
     <section className="commentsSection">
       <h3>{comments.length} Comments</h3>
       {comments.length === 0 ? <p>No comments found</p> : ""}
-      <AddComment setComments={setComments} comments={comments} article_id={article_id} />
+      <AddComment
+        setComments={setComments}
+        comments={comments}
+        article_id={article_id}
+        loadingComments={loadingComments}
+        setLoadingComments={setLoadingComments}
+      />
       <section className="commentsContainer">
         {comments.map((comment) => {
           const date = new Date(comment.created_at);
