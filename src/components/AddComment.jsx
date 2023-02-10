@@ -29,8 +29,7 @@ export default function AddComment({
     postComment(article_id, { username: "grumpy19", body: commentBody })
       .then((postedComment) => {
           setComments((currComments) => {
-            const updatedComments = [...currComments]
-                updatedComments[0] = postedComment
+            const updatedComments = [postedComment, ...currComments]
                 return updatedComments;
           });
         setPosted(true);
