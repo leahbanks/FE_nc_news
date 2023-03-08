@@ -1,7 +1,6 @@
 import { postComment } from "../utils/api";
 import { useContext, useState } from "react";
 import { UserContext } from "../context/userContext";
-import { setDayWithOptions } from "date-fns/fp";
 
 export default function AddComment({
   setComments,

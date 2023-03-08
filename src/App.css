@@ -125,23 +125,27 @@
 
 .navBar {
   display: flex;
-  justify-content:flex-start
+  justify-content:flex-start;
+  flex-direction: row;
 }
 
 .nav-login:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.nav-filter:hover {
+.nav-sort:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.nav-filter {
+.nav-topics:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.nav-login {
   color:aliceblue;
   width: 10vw;
   font-family: 'Poppins', sans-serif;
   margin-left: 10vh;
-  margin-right: 2vh;
   margin-bottom: 10%;
   display: block;
   text-align: center;
@@ -151,9 +155,46 @@
   line-height: 40px;
 }
 
-.nav-login {
-  color: aliceblue;
+.topics {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.nav-topics {
+  color:aliceblue;
   width: 10vw;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 10vh;
+  margin-bottom: 10%;
+  display: block;
+  text-align: center;
+  border-radius: 15px;
+  background-color: cadetblue;
+  font-size: 15px;
+  line-height: 40px;
+}
+
+.filter-articles {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.filter-label {
+  color:aliceblue;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 10vh;
+  margin-right: 2vh;
+  display: block;
+  text-align: center;
+  border-radius: 15px;
+  background-color: cadetblue;
+  font-size: 15px;
+  line-height: 40px;
+}
+
+.filter {
+  color: aliceblue;
   font-family: 'Poppins', sans-serif;
   display: block;
   text-align: center;
@@ -161,7 +202,11 @@
   background-color: cadetblue;
   font-size: 15px;
   line-height: 40px;
-  margin-right: 10vh;
+  margin-left: 10vh;
+}
+
+.filter:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .commentsSection {
