@@ -4,8 +4,10 @@ export const newsApi = axios.create({
   baseURL: "https://nc-news-81lq.onrender.com/api",
 });
 
-export const fetchArticles = () => {
-  return newsApi.get("/articles").then(({ data }) => {
+export const fetchArticles = (topic, query) => {
+  let newQuery = `/articles${query}`
+  if (topic) newQuery+= `&topic=${topic}`
+  return newsApi.get(newQuery).then(({ data }) => {
     return data.articles;
   });
 };
@@ -24,7 +26,7 @@ export const getUsers = () => {
 
 export const getTopics = () => {
   return newsApi.get("/topics").then(({ data }) => {
-    return data.topics;
+    return data;
   });
 };
 
