@@ -1,9 +1,5 @@
-
 @media (prefers-reduced-motion: no-preference) {
- 
-  }
-
-
+}
 
 .ArticleList {
   width: 85vw;
@@ -12,7 +8,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   text-align: left;
-  border: 2px solid cadetblue; 
+  border: 2px solid cadetblue;
   background-color: aliceblue;
   align-items: center;
   z-index: 999;
@@ -23,7 +19,9 @@
 }
 
 .ArticleList:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .article-info {
@@ -35,7 +33,7 @@
 
 .articlePreview {
   font-size: medium;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 3vh;
   color: darkslategray;
 }
@@ -60,7 +58,7 @@
 }
 
 .Article h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 1.5vh 1.5vw;
   border-radius: 15px;
   font-size: 50px;
@@ -72,8 +70,8 @@
 }
 
 .articleVote {
-  color:#282c34;
-  font-family: 'Poppins', sans-serif;
+  color: #282c34;
+  font-family: "Poppins", sans-serif;
   display: block;
   align-self: center;
   text-align: center;
@@ -94,8 +92,8 @@
   margin-right: 20vh;
 }
 
- .ArticleList h2 {
-  font-family: 'Poppins', sans-serif;
+.ArticleList h2 {
+  font-family: "Poppins", sans-serif;
   border-radius: 15px;
   font-size: 40px;
   color: #282c34;
@@ -103,18 +101,18 @@
   text-decoration: none;
   margin-top: 1%;
   margin-bottom: 1%;
- }
+}
 
 .userAvatar {
   width: 1cm;
 }
 
 .header {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   width: 96vw;
   margin-top: 0%;
   margin: 4vh auto 5vh auto;
-  color:#282c34;
+  color: #282c34;
   display: block;
   text-decoration: none;
   text-align: left;
@@ -125,32 +123,39 @@
 
 .navBar {
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   flex-direction: row;
 }
 
 .nav-login:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .nav-sort:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .nav-topics:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .nav-login {
-  color:aliceblue;
+  color: cadetblue;
   width: 10vw;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-left: 10vh;
   margin-bottom: 10%;
   display: block;
   text-align: center;
   border-radius: 15px;
-  background-color: cadetblue;
+  border: 2px solid cadetblue;
+  background-color: aliceblue;
   font-size: 15px;
   line-height: 40px;
 }
@@ -162,27 +167,30 @@
 }
 
 .nav-topics {
-  color:aliceblue;
+  color: aliceblue;
   width: 10vw;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-left: 10vh;
   margin-bottom: 10%;
   display: block;
   text-align: center;
   border-radius: 15px;
+  border: 2px solid cadetblue;
   background-color: cadetblue;
   font-size: 15px;
   line-height: 40px;
+  word-wrap:break-word;
 }
 
 .filter-articles {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .filter-label {
-  color:aliceblue;
-  font-family: 'Poppins', sans-serif;
+  color: aliceblue;
+  font-family: "Poppins", sans-serif;
   margin-left: 10vh;
   margin-right: 2vh;
   display: block;
@@ -195,10 +203,11 @@
 
 .filter {
   color: aliceblue;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   display: block;
   text-align: center;
   border-radius: 15px;
+  border: 2px solid cadetblue;
   background-color: cadetblue;
   font-size: 15px;
   line-height: 40px;
@@ -206,7 +215,9 @@
 }
 
 .filter:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .commentsSection {
@@ -219,7 +230,7 @@
 }
 
 .commentsSection h3 {
-  background-color:cadetblue;
+  background-color: cadetblue;
   padding: 1.5vh 1.5vw;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -234,8 +245,8 @@
 }
 
 .button-readmore {
-  color:aliceblue;
-  font-family: 'Poppins', sans-serif;
+  color: aliceblue;
+  font-family: "Poppins", sans-serif;
   margin-left: 10vh;
   margin-bottom: 10%;
   display: block;
@@ -244,33 +255,44 @@
   background-color: cadetblue;
   font-size: 15px;
   line-height: 40px;
-  border-color: cadetblue;
+  border: 2px solid cadetblue;
   box-shadow: none;
   margin: 5%;
   position: static;
   overflow: hidden;
-};
+}
 
 .button-readmore:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .button-container {
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
+.add-comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.comment-body {
+  border-radius: 15px;
+  border: 2px solid cadetblue;
+}
+
 .button-addcomment {
-  color:aliceblue;
-  font-family: 'Poppins', sans-serif;
-  display: block;
-  align-self: center;
-  text-align: center;
+  color: aliceblue;
+  font-family: "Poppins", sans-serif;
   border-radius: 15px;
   background-color: cadetblue;
   font-size: 15px;
-  line-height: 40px;
-  border-color: cadetblue;
+  border: 2px solid cadetblue;
   box-shadow: none;
   margin: 5%;
   position: static;
@@ -278,5 +300,58 @@
 }
 
 .button-addcomment:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.users-container {
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.users {
+  width: 45vh;
+  height: 35vh;
+  margin: 4vh auto 5vh auto;
+  text-align: center;
+  border: 2px solid cadetblue;
+  background-color: aliceblue;
+  font-size: 15px;
+  border-radius: 60px;
+
+}
+
+.user-image {
+  height: 150px;
+  width: 200px;
+  object-fit: scale-down;
+  mix-blend-mode: multiply;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.user-button {
+  color: aliceblue;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  text-align: center;
+  border-radius: 15px;
+  border: 2px solid cadetblue;
+  background-color: cadetblue;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.user-button:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.login-message {
+  background-color: cadetblue;
 }

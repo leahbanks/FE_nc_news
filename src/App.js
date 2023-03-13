@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import ArticleList from "./components/ArticleList";
 import Article from "./components/Article";
+import LogIn from "./components/LogIn"
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
@@ -14,7 +15,7 @@ function App() {
       <Routes>
         {" "}
         <Route
-          path="/articles/:topic"
+          path="/articles"
           element={
             <ArticleList
             />
@@ -25,8 +26,12 @@ function App() {
           element={<ArticleList article={article} setArticle={setArticle} />}
         ></Route>
         <Route
-          path="/articles/:article_id"
+          path="/articles/:article_id" 
           element={<Article article={article} setArticle={setArticle} />}
+        ></Route>
+          <Route
+          path="/users" 
+          element={<LogIn/>}
         ></Route>
       </Routes>
       <br></br>

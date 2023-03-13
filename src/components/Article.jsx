@@ -26,7 +26,7 @@ export default function Article(props) {
         });
       }
     );
-  }, [article_id, setArticleLoading, setArticle, article.created_at]);
+  }, [article_id, setArticleLoading, setArticle, article.created_at, setArticleAuthor]);
 
   if (articleLoading) {
     return "Loading...";
