@@ -39,6 +39,8 @@ export default function CommentList() {
           const formattedDate = format(date, "HH:MM E do LLL y");
           return (
             <CommentCard
+              comments={comments}
+              setComments={setComments}
               comment={comment}
               key={comment.comment_id}
               formattedDate={formattedDate}

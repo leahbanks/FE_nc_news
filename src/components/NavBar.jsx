@@ -19,6 +19,15 @@ export default function NavBar() {
     <section className="loading-animation"></section>
   ) : (
     <section className="navBar">
+      <div>
+          <Link
+              to={"/"}
+              style={{ textDecoration: "none" }}
+              className="nav-topics"
+            >
+              All
+            </Link>
+            </div>
       {topics.map((topic) => {
         return (
           <div key={topic.description}>
@@ -40,7 +49,7 @@ export default function NavBar() {
             <button className="nav-login" onClick={handleLogout}>
               Log Out
             </button>
-            <p>You are logged in as: {loggedInUser}</p>
+            <p>You are logged in as {loggedInUser}</p>
           </section>
         ) : (
           <Link

@@ -35,10 +35,18 @@ export default function ArticleVotes({ article, setArticle }) {
           <div>
             <p>
               Enjoyed this article?{" "}
-              <button onClick={updateVotes} value={"increase"}>
+              <button
+                className="vote-button"
+                onClick={updateVotes}
+                value={"increase"}
+              >
                 👍
               </button>{" "}
-              <button onClick={updateVotes} value={"decrease"}>
+              <button
+                className="vote-button"
+                onClick={updateVotes}
+                value={"decrease"}
+              >
                 👎
               </button>
             </p>

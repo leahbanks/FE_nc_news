@@ -19,11 +19,13 @@ export default function ArticleList() {
   }, [topic, sort_by]);
 
   const handleChange = (event) => {
+    setLoading(true);
     event.preventDefault();
     setSearch({
       sort_by: event.target.value,
       ...(topic ? { topic } : null),
     });
+    setLoading(false);
   };
 
   return loading ? (
@@ -42,6 +44,16 @@ export default function ArticleList() {
         <option value="comment_count">Most Comments</option>
         <option value="votes">Most Votes</option>
       </select>
+
+      {topic ? (
+        <h2 className="article-list-caption">
+          Latest articles in{" "}
+          {topic.charAt(0).toUpperCase() + topic.slice(1, topic.length)} {topic === "football" ? '⚽' : null} {topic === "cooking" ? '🍲' : null} {topic === "coding" ? '💻' : null}
+        </h2>
+      ) : (
+        <h2 className="article-list-caption">All articles 📰</h2>
+      )}
+  
       {articles.map((article) => {
         const date = new Date(article.created_at);
         const formattedDate = format(date, "E do LLL y");
