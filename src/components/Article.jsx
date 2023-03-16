@@ -26,13 +26,17 @@ export default function Article(props) {
         });
       }
     );
-  }, [article_id, setArticleLoading, setArticle, article.created_at, setArticleAuthor]);
+  }, [
+    article_id,
+    setArticleLoading,
+    setArticle,
+    article.created_at,
+    setArticleAuthor,
+  ]);
 
-  if (articleLoading) {
-    return "Loading...";
-  }
-
-  return (
+  return articleLoading ? (
+    <section className="loading-animation"></section>
+  ) : (
     <section>
       <section className="Article">
         <h2>{article.title}</h2>

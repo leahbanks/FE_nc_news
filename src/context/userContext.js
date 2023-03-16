@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
 
-
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
@@ -10,9 +9,10 @@ export const UserProvider = ({ children }) => {
     setLoggedInUser();
   };
 
-
   return (
-    <UserContext.Provider value={{ loggedInUser, setLoggedInUser, handleLogout }}>
+    <UserContext.Provider
+      value={{ loggedInUser, setLoggedInUser, handleLogout }}
+    >
       {children}
     </UserContext.Provider>
   );

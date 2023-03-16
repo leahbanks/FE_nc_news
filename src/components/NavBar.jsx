@@ -15,32 +15,10 @@ export default function NavBar() {
     });
   }, []);
 
-  if (navLoading) {
-    return "Loading...";
-  }
-
-  return (
+  return navLoading ? (
+    <section className="loading-animation"></section>
+  ) : (
     <section className="navBar">
-      <div className="topics">
-        {loggedInUser ? (
-          <section className="user-header-banner">
-            <article>
-            <button className="nav-login" onClick={handleLogout}>Log Out</button>
-              <p>You are logged in as: {loggedInUser}</p>
-              
-            </article>
-          </section>
-        ) : (
-          <Link
-            to="/users"
-            style={{ textDecoration: "none" }}
-            className="nav-login"
-          >
-            Log In
-          </Link>
-        )}
-        <section className="header-main"></section>
-      </div>
       {topics.map((topic) => {
         return (
           <div key={topic.description}>
@@ -56,6 +34,24 @@ export default function NavBar() {
           </div>
         );
       })}
+      <div className="topics">
+        {loggedInUser ? (
+          <section className="user-loggedin">
+            <button className="nav-login" onClick={handleLogout}>
+              Log Out
+            </button>
+            <p>You are logged in as: {loggedInUser}</p>
+          </section>
+        ) : (
+          <Link
+            to="/users"
+            style={{ textDecoration: "none" }}
+            className="nav-login"
+          >
+            Log In
+          </Link>
+        )}
+      </div>
     </section>
   );
 }

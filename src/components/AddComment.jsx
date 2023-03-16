@@ -51,7 +51,7 @@ export default function AddComment({
                 onChange={(e) => setCommentBody(e.target.value)}
                 value={commentBody}
                 className="comment-body"
-              ></textarea>  
+              ></textarea>
             ) : null}
             {loggedInUser ? (
               <button

@@ -14,7 +14,7 @@ export default function ArticleList() {
   useEffect(() => {
     fetchArticles(topic, sort_by).then((articles) => {
       setArticles(articles);
-      setLoading(false)
+      setLoading(false);
     });
   }, [topic, sort_by]);
 
@@ -26,11 +26,9 @@ export default function ArticleList() {
     });
   };
 
-  if (loading) {
-    return "loading articles..."
-  }
-
-  return (
+  return loading ? (
+    <section className="loading-animation"></section>
+  ) : (
     <section>
       <select
         className="filter"
@@ -44,19 +42,17 @@ export default function ArticleList() {
         <option value="comment_count">Most Comments</option>
         <option value="votes">Most Votes</option>
       </select>
-
-        {articles.map((article) => {
-          const date = new Date(article.created_at);
-          const formattedDate = format(date, "E do LLL y");
-
-          return (
-            <ArticleCard
-              {...article}
-              formattedDate={formattedDate}
-              key={article.article_id}
-            />
-          );
-        })}
+      {articles.map((article) => {
+        const date = new Date(article.created_at);
+        const formattedDate = format(date, "E do LLL y");
+        return (
+          <ArticleCard
+            {...article}
+            formattedDate={formattedDate}
+            key={article.article_id}
+          />
+        );
+      })}
     </section>
   );
 }

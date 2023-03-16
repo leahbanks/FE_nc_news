@@ -15,7 +15,7 @@ export default function ArticleCard(props) {
   const navigate = useNavigate();
 
   const handleClick = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     navigate(`/articles/${article_id}`);
   };
 
@@ -42,7 +42,9 @@ export default function ArticleCard(props) {
           </h4>
           <p className="articlePreview">{body.substr(0, 200) + "..."}</p>
         </li>
-        <button className="button-readmore" onClick={(e) => handleClick(e)}>Read More</button>
+        <button className="button-readmore" onClick={(e) => handleClick(e)}>
+          Read More
+        </button>
       </ul>
     </section>
   );

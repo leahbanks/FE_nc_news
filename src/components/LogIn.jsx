@@ -16,25 +16,31 @@ export default function LogIn() {
     });
   }, []);
 
-  if (loading) {
-    return "loading users.."
-  }
-
   const handleLogin = (event) => {
     setLoggedInUser(event.target.value);
     navigate(-1);
   };
 
-  console.log(loggedInUser)
+  console.log(loggedInUser);
 
-  return (
+  return loading ? (
+    <section className="loading-animation"></section>
+  ) : (
     <section>
       <ul className="users-container" style={{ listStyle: "none" }}>
         {users.map((user) => {
           return (
             <li className="users" key={user.username}>
-              <img src={user.avatar_url} alt={`${user.username} avatar`} className="user-image"/>
-              <button className="user-button" onClick={handleLogin} value={user.username}>
+              <img
+                src={user.avatar_url}
+                alt={`${user.username} avatar`}
+                className="user-image"
+              />
+              <button
+                className="user-button"
+                onClick={handleLogin}
+                value={user.username}
+              >
                 Log in as {user.username}
               </button>
             </li>

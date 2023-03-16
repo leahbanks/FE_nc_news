@@ -179,7 +179,7 @@
   background-color: cadetblue;
   font-size: 15px;
   line-height: 40px;
-  word-wrap:break-word;
+  word-wrap: break-word;
 }
 
 .filter-articles {
@@ -307,7 +307,7 @@
 
 .users-container {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -321,7 +321,6 @@
   background-color: aliceblue;
   font-size: 15px;
   border-radius: 60px;
-
 }
 
 .user-image {
@@ -354,4 +353,25 @@
 
 .login-message {
   background-color: cadetblue;
+}
+
+.user-loggedin {
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-loggedin p {
+  margin-left: 10vh;
+  color: #282c34;
+  font-family: "Poppins", sans-serif;
+  font-size: small;
+}
+
+.loading-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background: url("../loading-icon-animated-gif-19.jpg") no-repeat center center;
+  background-size: 400px;
 }
