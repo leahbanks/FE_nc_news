@@ -22,10 +22,10 @@ In order to run this project locally, the following must be installed on your ma
 ## 💻  Run Locally
 
 1. Fork this repository.
-2. Via your terminal, navigate to your desired directory and clone your forked version of the repositoty to your local machine using the command `git clone <repo-url>`.
-3. `cd` into your new directory and open it with your chosen software, e.g. using the command `code .` to open it in VSCode.
-
-In your terminal, run `npm install <package>` to install all dependencies. You will need the following packages:
+2. Via your terminal, navigate to your desired directory or create a new directory using `mkdir <project-name>`. 
+3. Clone your forked version of the repository to your local machine using the command `git clone <repo-url>`.
+3. Naviagte into your new directory using `cd <project-name>` and open it with your chosen software, e.g. using the command `code .` to open it in VSCode.
+4. In your terminal, run `npm install <package>` to install all dependencies. You will need the following packages:
 
 * node v19.6.1
 * react v18.2.0
