@@ -36,6 +36,10 @@ width: fit-content;
   padding: 0%;
 }
 
+.article-list-title {
+  color: rgb(30, 109, 111);
+}
+
 .articlePreview {
   font-size: medium;
   font-family: "Poppins", sans-serif;
@@ -44,39 +48,40 @@ width: fit-content;
 }
 
 .Article {
-  box-sizing: border-box;
-  width: fit-content;
-  margin-left: 20vh;
-  margin-right: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 0 20px;
+  font-family: sans-serif;
+  font-weight: 00;
+  color: #282c34;
 }
 
 .articleBody {
   font-family: sans-serif;
   text-align: left;
-  margin-left: 20vh;
-  margin-right: 40vh;
+  margin-left: 30vh;
+  margin-right: 30vh;
   margin-top: 5vh;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
   line-height: 5vh;
 }
 
 .Article h2 {
   font-family: "Poppins", sans-serif;
   padding: 1.5vh 1.5vw;
-  border-radius: 15px;
   font-size: 50px;
   color: #282c34;
-  text-align: left;
-  margin-left: 20vh;
-  margin-right: 25vh;
+  text-align: center;
+  margin-left: 30vh;
+  margin-right: 30vh;
   margin-bottom: 0%;
 }
 
 .articleVote {
   color: darkslategray;
   font-family: "Poppins", sans-serif;
-  display: block;
   align-self: center;
   text-align: center;
   border-radius: 20px;
@@ -86,14 +91,12 @@ width: fit-content;
   border: solid 1.5px darkslategray;
   box-shadow: none;
   margin: 5%;
-  position: static;
-  overflow: hidden;
+  margin-bottom: 15vh;
 }
 
 .articleImg {
   border-radius: 60px;
-  margin-left: 20vh;
-  margin-right: 20vh;
+  width: 120vh;
 }
 
 .ArticleList h2 {
@@ -109,6 +112,7 @@ width: fit-content;
 
 .userAvatar {
   width: 1cm;
+  mix-blend-mode: multiply;
 }
 
 .header {
@@ -131,9 +135,16 @@ width: fit-content;
 }
 
 .nav-login:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  margin-left: 10vh;
+  margin-bottom: 10%;
+  text-align: center;
+  border-radius: 15px;
+  border: 1.5px solid rgb(255, 255, 255);
+  background-color: darkslategray;
+  font-size: 15px;
+  line-height: 40px;
 }
 
 .nav-topics:hover {
@@ -147,7 +158,6 @@ width: fit-content;
   font-family: "Poppins", sans-serif;
   margin-left: 10vh;
   margin-bottom: 10%;
-  display: block;
   text-align: center;
   border-radius: 15px;
   border: 1.5px solid darkslategray;
@@ -222,8 +232,8 @@ width: fit-content;
 .commentCard {
   padding: 2vh;
   border-top: 1px solid darkslategray;
-  margin-left: 8vh;
-  margin-right: 8vh;
+  margin-left: 15vh;
+  margin-right: 15vh;
 }
 
 .button-readmore {
@@ -263,7 +273,7 @@ width: fit-content;
 .comment-body {
   width: 50vh;
   align-items: center;
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   border-radius: 15px;
   border: 2px solid darkslategray;
 }
@@ -283,9 +293,17 @@ width: fit-content;
 }
 
 .button-addcomment:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  border-radius: 15px;
+  background-color: darkslategray;
+  font-size: 15px;
+  border: 1.5px solid whitesmoke;
+  box-shadow: none;
+  margin: 5%;
+  position: static;
+  overflow: hidden;
+  align-items: center;
 }
 
 .users-container {
@@ -337,11 +355,12 @@ width: fit-content;
 .user-loggedin {
   display: flex;
   justify-content: space-around;
+
 }
 
 .user-loggedin p {
   margin-left: 10vh;
-  color: #282c34;
+  color: olive;
   font-family: "Poppins", sans-serif;
   font-size: small;
 }
@@ -394,7 +413,6 @@ width: fit-content;
 
 .delete-button {
   margin-top: 2vh;
-  margin-right: 5vh;
   border: rgb(255, 255, 255);
   background: rgb(255, 255, 255);
 }
@@ -406,12 +424,64 @@ width: fit-content;
 
 .posted-date {
   margin-top: 2vh;
-  margin-left: 5vh;
   margin-bottom: 0%;
   font-size: small;
 }
 
 .comment-text {
-  margin-left: 10vh;
-  margin-right: 10vh;
+ text-align: center;
+ font: sans-serif;
+}
+
+.comment-scroll-button {
+  border: rgb(255, 255, 255);
+  background: whitesmoke;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: medium;
+  color: #282c34;
+}
+
+.comment-scroll-button {
+  border: rgb(255, 255, 255);
+  background: whitesmoke;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: medium;
+  color: #282c34;
+}
+
+.topic-nav-button {
+  border: rgb(255, 255, 255);
+  background: whitesmoke;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: medium;
+  color: #282c34;
+}
+
+.topic-nav-button:hover {
+  color:olive;
+}
+
+.comment-scroll-button:hover {
+  color: olive;
+}
+
+.vote-scroll-button {
+  border: rgb(255, 255, 255);
+  background: whitesmoke;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: medium;
+  color: #282c34;
+}
+
+.vote-scroll-button:hover {
+  color: olive;
+}
+
+.confirmation-message {
+  color: olive;
+  font-family: "Poppins", sans-serif;
 }

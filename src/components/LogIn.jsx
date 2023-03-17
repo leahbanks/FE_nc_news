@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function LogIn() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { loggedInUser, setLoggedInUser } = useContext(UserContext);
+  const { setLoggedInUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -20,8 +20,6 @@ export default function LogIn() {
     setLoggedInUser(event.target.value);
     navigate(-1);
   };
-
-  console.log(loggedInUser);
 
   return loading ? (
     <section className="loading-animation"></section>

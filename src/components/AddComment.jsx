@@ -18,7 +18,6 @@ export default function AddComment({
     setPosting(true);
     if (loggedInUser === undefined) {
       setPosting(false);
-      return "you must be logged in to post a comment!";
     } else {
       postComment(article_id, { username: loggedInUser, body: commentBody })
         .then((postedComment) => {
@@ -30,14 +29,19 @@ export default function AddComment({
           setLoadingComments(false);
         })
         .catch((err) => {
-          "Something went wrong - please try again!";
+          return "Something went wrong - please try again!";
         });
     }
   };
 
   if (posting) {
-    return "Posting...";
+    return <p className="confirmation-message">Posting...</p>;
   }
+
+  const refresh = () => {
+    setPosted(false);
+    setCommentBody("");
+  };
 
   return (
     <section className="add-comment">
@@ -72,7 +76,16 @@ export default function AddComment({
             )}
           </form>
         ) : (
-          <p>Comment posted!</p>
+          <div>
+            <p className="confirmation-message">Comment posted!</p>
+            <button
+              type="submit"
+              className="button-addcomment"
+              onClick={refresh}
+            >
+              Add another comment
+            </button>
+          </div>
         )}
       </div>
     </section>

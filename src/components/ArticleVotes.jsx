@@ -52,7 +52,7 @@ export default function ArticleVotes({ article, setArticle }) {
             </p>
           </div>
         ) : (
-          <p> Vote submitted! </p>
+          <p className="confirmation-message"> Vote submitted! </p>
         )}
       </div>
       <p>{error}</p>

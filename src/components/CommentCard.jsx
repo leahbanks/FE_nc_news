@@ -10,8 +10,10 @@ export default function CommentCard({
 }) {
   const { loggedInUser } = useContext(UserContext);
   const [deletedComments, setDeletedComments] = useState([]);
+  const [deleting, setDeleting] = useState(null)
 
   const handleDelete = (comment_id) => {
+    setDeleting(true)
     if (deletedComments.includes(comment_id)) {
       alert("Please wait - this comment is being deleted");
       return;
@@ -26,9 +28,12 @@ export default function CommentCard({
     deleteCommentByCommentId(comment_id).then(() => {
       setDeletedComments(deletedComments.filter((id) => id !== comment_id));
       setComments(updatedComments);
-      alert("Your comment has now been deleted");
+      setDeleting(false)
+      return alert("Your comment has now been deleted");
     });
   };
+
+  if (deleting) return <p className="confirmation-message">deleting comment...</p>
 
   return (
     <div className="commentCard">
