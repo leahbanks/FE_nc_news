@@ -16,7 +16,7 @@ The Github repository can be found [here](https://github.com/leahbanks/BE_nc_new
 
 In order to run this project locally, the following must be installed on your machine:
 
- * Node.js -Node Package Manager (npm) 
+ * Node.js v19.6.1 -Node Package Manager (npm) 
  * git (and a Github account)
 
 ## 💻  Run Locally
