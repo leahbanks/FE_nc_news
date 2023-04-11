@@ -45,3 +45,17 @@
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
 }
+
+
+@media screen and (max-width: 750px) {
+  .comment-card {
+    margin-left: 0vh;
+    margin-right: 0vh;
+  }
+
+  .comment-text {
+    text-align: left;
+    font: sans-serif;
+    padding: 0px;
+  }
+}

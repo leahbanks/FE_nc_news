@@ -21,6 +21,11 @@ export default function ArticleCard(props) {
     navigate(`/articles/${article_id}`);
   };
 
+  const handleTopicClick = (e) => {
+    e.preventDefault();
+    navigate(`/articles/?topic=${topic}`);
+  };
+
   return (
     <li className="article-card">
       <Link
@@ -46,14 +51,7 @@ export default function ArticleCard(props) {
         <div className="card-details">
           <h5>{formattedDate.slice(3, formattedDate.length)}</h5>
           <h5>{author}</h5>
-          <h5
-            className="topic-btn"
-            onClick={() => {
-              navigate(`articles/?topic=${topic}`);
-            }}
-          >
-            {topic}
-          </h5>
+          <h5>{topic}</h5>
           <h5> 💬 {comment_count} </h5>
           <h5> 👍 {votes}</h5>
         </div>
