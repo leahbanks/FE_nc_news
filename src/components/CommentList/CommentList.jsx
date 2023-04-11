@@ -1,10 +1,11 @@
-import AddComment from "./AddComment";
-import { getComments } from "../utils/api";
+import AddComment from "../AddComment/AddComment";
+import { getComments } from "../../utils/api";
 import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
-import CommentCard from "./CommentCard";
-import { UserContext } from "../context/userContext";
+import CommentCard from "../CommentCard/CommentCard";
+import { UserContext } from "../../contexts/userContext";
 import { format } from "date-fns";
+import "./CommentList.css";
 
 export default function CommentList() {
   const [comments, setComments] = useState([]);
@@ -13,7 +14,7 @@ export default function CommentList() {
   const { loggedInUser } = useContext(UserContext);
 
   useEffect(() => {
-    setLoadingComments(true)
+    setLoadingComments(true);
     getComments(article_id).then((comments) => setComments(comments));
     setLoadingComments(false);
   }, [article_id, loggedInUser]);
@@ -23,7 +24,7 @@ export default function CommentList() {
   }
 
   return (
-    <section className="commentsSection">
+    <section className="comments-section">
       <h3>{comments.length} Comments</h3>
       {comments.length === 0 ? <p>No comments found</p> : ""}
       <AddComment
@@ -33,7 +34,7 @@ export default function CommentList() {
         loadingComments={loadingComments}
         setLoadingComments={setLoadingComments}
       />
-      <section className="commentsContainer">
+      <section className="comments-container">
         {comments.map((comment) => {
           const date = new Date(comment.created_at);
           const formattedDate = format(date, "HH:MM E do LLL y");

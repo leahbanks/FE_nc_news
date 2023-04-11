@@ -1,0 +1,106 @@
+.article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  color: black;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.article h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 6vh;
+  text-align: center;
+}
+
+.article-img {
+  border-radius: 5rem;
+  padding-top: 20px;
+}
+
+.article-body {
+  padding: 60px;
+  padding-bottom: 50px;
+  text-align: left;
+  width: 120vh;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.topic-nav-button {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.topic-nav-button:hover {
+  color: olive;
+}
+
+.comment-scroll-button {
+  font-weight: 600;
+  font-size: medium;
+}
+
+.comment-scroll-button:hover {
+  color: olive;
+  cursor: pointer;
+}
+
+.vote-scroll-button {
+  font-weight: 600;
+  font-size: medium;
+}
+
+.vote-scroll-button:hover {
+  color: olive;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 1.5cm;
+  mix-blend-mode: multiply;
+  padding-bottom: 10px;
+}
+
+.more-articles {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: medium;
+  font-size: 2.5vh;
+}
+
+.more-articles:hover {
+  cursor: pointer;
+  color: olive;
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.arrow {
+  display: inline-block;
+  padding-top: 0.75rem;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 750px) {
+  .article-img {
+    overflow-x: hidden;
+    width: 50vh;
+  }
+
+  .user-avatar {
+    width: 1cm;
+  }
+
+  .article-body {
+    text-align: center;
+    width: 60vh;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}

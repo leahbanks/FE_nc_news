@@ -1,7 +1,8 @@
-import { postComment } from "../utils/api";
+import { postComment } from "../../utils/api";
 import { useContext, useState } from "react";
-import { UserContext } from "../context/userContext";
+import { UserContext } from "../../contexts/userContext";
 import { Link } from "react-router-dom";
+import "./AddComment.css";
 
 export default function AddComment({
   setComments,
@@ -51,7 +52,7 @@ export default function AddComment({
             {loggedInUser ? (
               <textarea
                 id="comment-body"
-                placeholder="type your comment here"
+                placeholder="  type your comment here"
                 onChange={(e) => setCommentBody(e.target.value)}
                 value={commentBody}
                 className="comment-body"

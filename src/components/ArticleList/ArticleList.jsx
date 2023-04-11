@@ -1,8 +1,9 @@
-import ArticleCard from "./ArticleCard";
+import ArticleCard from "../ArticleCard/ArticleCard";
 import { useEffect, useState } from "react";
-import { fetchArticles } from "../utils/api";
+import { fetchArticles } from "../../utils/api";
 import { format } from "date-fns";
 import { useSearchParams } from "react-router-dom";
+import "./ArticleList.css";
 
 export default function ArticleList() {
   const [loading, setLoading] = useState(true);
@@ -31,7 +32,7 @@ export default function ArticleList() {
   return loading ? (
     <section className="loading-animation"></section>
   ) : (
-    <section>
+    <div className="main-container">
       <select
         className="filter"
         onChange={(event) => {
@@ -48,23 +49,28 @@ export default function ArticleList() {
       {topic ? (
         <h2 className="article-list-caption">
           Latest articles in{" "}
-          {topic.charAt(0).toUpperCase() + topic.slice(1, topic.length)} {topic === "football" ? '⚽' : null} {topic === "cooking" ? '🍲' : null} {topic === "coding" ? '💻' : null}
+          {topic.charAt(0).toUpperCase() + topic.slice(1, topic.length)}{" "}
+          {topic === "football" ? "⚽" : null}{" "}
+          {topic === "cooking" ? "🍲" : null} {topic === "coding" ? "💻" : null}
         </h2>
       ) : (
         <h2 className="article-list-caption">All articles 📰</h2>
       )}
-  
-      {articles.map((article) => {
-        const date = new Date(article.created_at);
-        const formattedDate = format(date, "E do LLL y");
-        return (
-          <ArticleCard
-            {...article}
-            formattedDate={formattedDate}
-            key={article.article_id}
-          />
-        );
-      })}
-    </section>
+      <section className="article-list-container">
+        <ul className="homeArticleList">
+          {articles.map((article) => {
+            const date = new Date(article.created_at);
+            const formattedDate = format(date, "E do LLL y");
+            return (
+              <ArticleCard
+                {...article}
+                formattedDate={formattedDate}
+                key={article.article_id}
+              />
+            );
+          })}
+        </ul>
+      </section>
+    </div>
   );
 }

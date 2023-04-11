@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { getUsers } from "../utils/api";
-import { UserContext } from "../context/userContext";
+import { getUsers } from "../../utils/api";
+import { UserContext } from "../../contexts/userContext";
 import { useNavigate } from "react-router-dom";
+import "./LogIn.css";
 
 export default function LogIn() {
   const [users, setUsers] = useState([]);
@@ -34,6 +35,7 @@ export default function LogIn() {
                 alt={`${user.username} avatar`}
                 className="user-image"
               />
+              <br></br>
               <button
                 className="user-button"
                 onClick={handleLogin}

@@ -1,0 +1,16 @@
+.comments-section {
+  background-color: rgb(255, 255, 255);
+  width: 85vw;
+  margin: 4vh auto 5vh auto;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.comments-section h3 {
+  color: whitesmoke;
+  background-color: black;
+  padding: 1.5vh 1.5vw;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+}

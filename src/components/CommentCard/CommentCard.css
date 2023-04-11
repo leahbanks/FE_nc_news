@@ -1,0 +1,47 @@
+.comment-card {
+  font-family: sans-serif;
+  padding: 2vh;
+  border-top: 1px solid darkslategray;
+  margin-left: 15vh;
+  margin-right: 15vh;
+}
+
+.delete-comment {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+}
+
+.posted-date {
+  margin-top: 2vh;
+  margin-bottom: 0%;
+  font-size: small;
+}
+
+.delete-button {
+  margin-top: 2vh;
+  border: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.comment-text {
+  text-align: center;
+  font: sans-serif;
+}
+
+.comment-vote {
+  border: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
+}
+
+.comment-vote:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}

@@ -1,0 +1,86 @@
+.nav-bar {
+  display: flex;
+  justify-content: left;
+  gap: 2.5rem;
+  flex-direction: row;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid olive;
+}
+
+.nav-topics {
+  display: inline-block;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 1.8rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 550;
+}
+
+.nav-topics:hover {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  color: olive;
+}
+
+.user-loggedin p {
+  margin-left: 10vh;
+  color: olive;
+  font-family: sans-serif;
+  font-size: small;
+}
+
+.nav-login {
+  display: inline-block;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: olive;
+  font-size: 1.8rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 550;
+}
+
+.nav-login:hover {
+  color: black;
+}
+
+.logged-in {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: olive;
+  font-weight: 800;
+  border: 1px solid olive;
+  border-bottom-right-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.logged-in:hover {
+  color: black;
+  border: 1px solid black;
+}
+
+@media screen and (min-width: 1600px) {
+  .nav-bar {
+    margin-right: 12rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .nav-bar {
+    gap: 1rem;
+    padding: 20px;
+    padding-top: 0px;
+    justify-content: center;
+  }
+
+  .nav-topics {
+    font-size: 1.2rem;
+  }
+
+  .nav-login {
+    font-size: 1.2rem;
+  }
+}

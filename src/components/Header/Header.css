@@ -1,0 +1,17 @@
+.header {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  font-size: 15vh;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    text-align: center;
+    font-size: 8vh;
+    padding-left: 0px;
+  }
+}

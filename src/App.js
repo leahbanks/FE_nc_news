@@ -1,8 +1,8 @@
 import "./App.css";
-import Header from "./components/Header";
-import ArticleList from "./components/ArticleList";
-import Article from "./components/Article";
-import LogIn from "./components/LogIn"
+import Header from "./components/Header/Header";
+import ArticleList from "./components/ArticleList/ArticleList";
+import Article from "./components/Article/Article";
+import LogIn from "./components/LogIn/LogIn"
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 

@@ -1,0 +1,39 @@
+.add-comment {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container textarea {
+  width: 250px;
+}
+
+.button-addcomment {
+  color: black;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  font-size: 15px;
+  border: 1.5px solid black;
+  margin: 5%;
+  padding: 2.5px;
+  font-weight: 400;
+}
+
+.button-addcomment:hover {
+  background-color: black;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.comment-body {
+  width: 50vh;
+  align-items: center;
+  font-family: sans-serif;
+  border-radius: 15px;
+  border: 2px solid darkslategray;
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { patchArticleVotes } from "../utils/api";
+import { patchArticleVotes } from "../../utils/api";
+import "./ArticleVotes.css";
 
 export default function ArticleVotes({ article, setArticle }) {
   const [voted, setVoted] = useState(false);
@@ -29,7 +30,7 @@ export default function ArticleVotes({ article, setArticle }) {
   };
 
   return (
-    <section className="articleVote">
+    <section className="article-vote">
       <div>
         {!voted ? (
           <div>
@@ -40,7 +41,7 @@ export default function ArticleVotes({ article, setArticle }) {
                 onClick={updateVotes}
                 value={"increase"}
               >
-                👍
+                👍{" "}
               </button>{" "}
               <button
                 className="vote-button"
