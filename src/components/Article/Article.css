@@ -46,7 +46,7 @@
 
 .comment-scroll-button {
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: underline;
   color: black;
   font-weight: 600;
   font-size: medium;
@@ -60,7 +60,7 @@
 
 .vote-scroll-button {
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: underline;
   color: black;
   font-weight: 600;
   font-size: medium;
