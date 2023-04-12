@@ -20,12 +20,7 @@ export default function ArticleCard(props) {
     e.preventDefault();
     navigate(`/articles/${article_id}`);
   };
-
-  const handleTopicClick = (e) => {
-    e.preventDefault();
-    navigate(`/articles/?topic=${topic}`);
-  };
-
+ 
   return (
     <li className="article-card">
       <Link
