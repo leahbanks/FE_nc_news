@@ -79,6 +79,8 @@
   color: olive;
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
+  text-decoration: none;
+  background-color: transparent;
 }
 
 .arrow {
