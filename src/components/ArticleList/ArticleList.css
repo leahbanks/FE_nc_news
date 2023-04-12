@@ -2,7 +2,7 @@
   margin: 1rem;
 }
 
-.homeArticleList {
+.article-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -44,7 +44,7 @@
 }
 
 @media screen and (min-width: 900px) {
-  .homeArticleList {
+  .article-list {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }

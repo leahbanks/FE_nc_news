@@ -57,7 +57,7 @@ export default function ArticleList() {
         <h2 className="article-list-caption">All articles 📰</h2>
       )}
       <section className="article-list-container">
-        <ul className="homeArticleList">
+        <ul className="article-list">
           {articles.map((article) => {
             const date = new Date(article.created_at);
             const formattedDate = format(date, "E do LLL y");

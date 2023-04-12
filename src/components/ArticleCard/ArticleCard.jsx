@@ -1,4 +1,4 @@
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./ArticleCard.css";
 
 export default function ArticleCard(props) {
@@ -11,15 +11,7 @@ export default function ArticleCard(props) {
     votes,
     formattedDate,
     article_img_url,
-    body,
   } = props;
-
-  const navigate = useNavigate();
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    navigate(`/articles/${article_id}`);
-  };
  
   return (
     <li className="article-card">
@@ -49,15 +41,6 @@ export default function ArticleCard(props) {
           <h5>{topic}</h5>
           <h5> 💬 {comment_count} </h5>
           <h5> 👍 {votes}</h5>
-        </div>
-        <p className="truncate body">{body}</p>
-        <div
-          className="read-more-btn"
-          onClick={(e) => {
-            handleClick(e);
-          }}
-        >
-          <p>Read More</p>
         </div>
       </div>
     </li>
