@@ -4,6 +4,7 @@ import { fetchArticles } from "../../utils/api";
 import { format } from "date-fns";
 import { useSearchParams } from "react-router-dom";
 import "./ArticleList.css";
+import {AiOutlineArrowUp} from "react-icons/ai";
 
 export default function ArticleList() {
   const [loading, setLoading] = useState(true);
@@ -11,6 +12,21 @@ export default function ArticleList() {
   let [search, setSearch] = useSearchParams();
   const topic = search.get("topic");
   const sort_by = search.get("sort_by");
+
+  const articlesPerPage = 6;
+
+  const [next, setNext] = useState(articlesPerPage);
+
+  const handleMoreArticles = () => {
+    setNext(next + articlesPerPage);
+  };
+
+  const handleClickScroll = () => {
+    const element = document.getElementById("filter");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   useEffect(() => {
     fetchArticles(topic, sort_by).then((articles) => {
@@ -58,17 +74,27 @@ export default function ArticleList() {
       )}
       <section className="article-list-container">
         <ul className="article-list">
-          {articles.map((article) => {
-            const date = new Date(article.created_at);
-            const formattedDate = format(date, "E do LLL y");
-            return (
-              <ArticleCard
-                {...article}
-                formattedDate={formattedDate}
-                key={article.article_id}
-              />
-            );
-          })}
+          {articles &&
+            articles.slice(0, next).map((article) => {
+              const date = new Date(article.created_at);
+              const formattedDate = format(date, "E do LLL y");
+
+              return (
+                <ArticleCard
+                  {...article}
+                  formattedDate={formattedDate}
+                  key={article.article_id}
+                />
+              );
+            })}
+
+          {next < articles.length ? (
+            <button onClick={handleMoreArticles} className="loadmore-btn">
+              Load more
+            </button>
+          ) : (
+            <button onClick={handleClickScroll} className="loadmore-btn">Back to top <AiOutlineArrowUp/></button>
+          )}
         </ul>
       </section>
     </div>

@@ -43,6 +43,39 @@
   padding-left: 5px;
 }
 
+.loadmore-btn {
+    color: whitesmoke;
+    font-family: "Poppins", sans-serif;
+    margin-top: 5%;
+    margin-left: 2%;
+    text-align: center;
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
+    background-color: olive;
+    font-size: 13px;
+    line-height: 25px;
+    width: fit-content;
+  }
+  
+  .loadmore-btn:hover {
+    cursor: pointer;
+    background-color: black;
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  .back-to-top {
+    font-size: 1.2rem;
+    color: olive;
+    font-weight: 800;
+    margin-top: 5%;
+  }
+
+  .back-to-top:hover {
+    cursor: pointer;
+    color: black;
+  }
+
 @media screen and (min-width: 900px) {
   .article-list {
     grid-template-columns: repeat(3, 1fr);
