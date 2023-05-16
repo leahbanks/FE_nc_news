@@ -5,23 +5,27 @@
 }
 
 .button-container {
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
 .button-container textarea {
   width: 250px;
+  height: 80px;
+  border-radius: 3px;
 }
 
 .button-addcomment {
-  color: black;
-  border-radius: 0.5rem;
-  background-color: transparent;
-  font-size: 15px;
-  border: 1.5px solid black;
-  margin: 5%;
-  padding: 2.5px;
-  font-weight: 400;
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  margin-top: 5%;
+  margin-left: 2%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  background-color: olive;
+  font-size: 13px;
+  place-self: center;
 }
 
 .button-addcomment:hover {
