@@ -62,8 +62,7 @@ export default function CommentCard({
       <article>
         <p className="comment-text">{comment.body}</p>
         <br></br>
-        <button className="comment-vote">⬆️</button> {comment.votes}{" "}
-        <button className="comment-vote">⬇️</button>
+        <button className="comment-vote">⬆️ <b>{comment.votes}</b></button> {" "}
       </article>
     </div>
   );
