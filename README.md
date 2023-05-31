@@ -6,13 +6,13 @@ NC News is an interactive web application built using React. It serves as a news
 
 You can view the production version of NC News [here](https://nc-news-lb.netlify.app/), hosted via Netlify.
 
-<img width="500" height="250" alt="Screenshot 2023-03-21 at 09 04 45" src="https://user-images.githubusercontent.com/118462248/226560973-ab377ecf-0902-4413-a6f4-e4b7f056d54b.png"> <img width="500" height="250" alt="Screenshot 2023-03-21 at 09 12 53" src="https://user-images.githubusercontent.com/118462248/226562839-3055ebd4-1931-48b0-b3f9-ec4f75620aea.png">
+<img width="500" height="250" alt="Screenshot 2023-04-11 at 23 42 02" src="https://github.com/leahbanks/FE_nc_news/assets/118462248/0959acd7-c68d-4869-89a7-b5048e536419"> <img width="500" height="250" alt="Screenshot 2023-04-11 at 23 43 40" src="https://github.com/leahbanks/FE_nc_news/assets/118462248/3c169fd7-a692-41f6-a800-679f8dd2029d"> <img width="500" height="250" alt="Screenshot 2023-04-11 at 23 28 48" src="https://github.com/leahbanks/FE_nc_news/assets/118462248/ac32b825-4a74-4850-84df-535ee3134d5b"> <img width="500" height="250" alt="Screenshot 2023-04-11 at 23 27 42" src="https://github.com/leahbanks/FE_nc_news/assets/118462248/52cd876e-384f-4267-846b-f4c5c958cd29">
 
-<img width="500" height="250" alt="Screenshot 2023-03-21 at 09 14 54" src="https://user-images.githubusercontent.com/118462248/226563422-fb33ff2f-090f-4601-b6be-1cb7c676e455.png"> <img width="500" height="250" alt="Screenshot 2023-03-21 at 09 14 08" src="https://user-images.githubusercontent.com/118462248/226563419-fe24e57b-bc45-4363-a796-1c46e658b31d.png"> 
 
 
 
 ## 🖥️  Back End 
+
 
 The back end API used for this project is hosted via Render and can be viewed [here](https://nc-news-81lq.onrender.com/api).
 
