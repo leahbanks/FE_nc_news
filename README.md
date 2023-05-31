@@ -1,10 +1,10 @@
-# NC NEWS 
+# NEWS BANK
 
 ## 📝  Description 
 
-NC News is an interactive web application built using React. It serves as a news aggregation and comments board, allowing users to log in, browse the various articles by topic/popularity and get involved in the discussion. The app uses the NC News API to fetch the stories and allow the user to interact with them via comments and votes.
+NewsBank is an interactive web application built using React. It serves as a news aggregation and comments board, allowing users to log in, browse the various articles by topic/popularity and get involved in the discussion. The app uses the NewsBank API to fetch the stories and allow the user to interact with them via comments and votes.
 
-You can view the production version of NC News [here](https://nc-news-lb.netlify.app/), hosted via Netlify.
+You can view the production version of NewsBank [here](https://nc-news-lb.netlify.app/), hosted via Netlify.
 
 <img width="500" height="250" alt="Screenshot 2023-04-11 at 23 42 02" src="https://github.com/leahbanks/FE_nc_news/assets/118462248/0959acd7-c68d-4869-89a7-b5048e536419"> <img width="500" height="250" alt="Screenshot 2023-04-11 at 23 43 40" src="https://github.com/leahbanks/FE_nc_news/assets/118462248/3c169fd7-a692-41f6-a800-679f8dd2029d"> <img width="500" height="250" alt="Screenshot 2023-04-11 at 23 28 48" src="https://github.com/leahbanks/FE_nc_news/assets/118462248/ac32b825-4a74-4850-84df-535ee3134d5b"> <img width="500" height="250" alt="Screenshot 2023-04-11 at 23 27 42" src="https://github.com/leahbanks/FE_nc_news/assets/118462248/52cd876e-384f-4267-846b-f4c5c958cd29">
 
