@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <section>
       <Link to="/" style={{ textDecoration: "none" }}>
-        <h1 className="header">NC NEWS</h1>
+        <h1 className="header">NEWS BANK</h1>
       </Link>
       <NavBar />
     </section>
